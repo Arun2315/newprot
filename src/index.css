@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes twinkling {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes lightning {
+  0%, 90% { background-color: black; }
+  95% { background-color: rgba(255, 255, 255, 0.9); }
+  100% { background-color: black; }
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+@keyframes border-glow {
+  0% { box-shadow: 0 0 5px blue; }
+  50% { box-shadow: 0 0 20px skyblue; }
+  100% { box-shadow: 0 0 5px blue; }
+}
+
+.animate-border-glow {
+  animation: border-glow 2s infinite alternate;
+}
